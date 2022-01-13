@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display&display=swap');
 
+:root {
+    /* Une variable doit toujours commencer par --*/
+    --white: white ;
+    --black: black ;
+    --orange: orange ;
+    --grey: #999999 ;
+    --grey-dark: #4a4a4b ;
+    --grey-light: #f8f9fa ;
+    --green: #a2c0be ;
+}
+
 body{
     font-family:'Open sans', sans-serif;
     font-size: 16px;
@@ -18,19 +29,17 @@ header {
     justify-content: space-between;
     width: 60%;
     margin: auto;
-    padding: 20px 0 20px 0; /* haut droite bas gauche |  ou padding-top/bottom/right/left */
-
-    
+    padding: 20px 0 20px 0; /* haut droite bas gauche |  ou padding-top/bottom/right/left */ 
 }
 
 .logo{
     font-size: 2rem;
     text-decoration: none;
-    color: black;
+    color: var(--black);
 } 
 
 .logo span {
-    color: orange;
+    color: var(--orange);
 }
 
 #menu nav ul {
@@ -42,8 +51,22 @@ header {
 
 #menu nav ul li a {
     text-decoration: none;
-    color: #999999;
+    color: var(--grey);
 }
+
+/** Colorer au survol de la souris */
+
+#menu nav ul li a {
+    text-decoration: none;
+    color: var(--grey);
+    transition: color 350ms;
+}
+
+#menu nav ul li a:hover {
+    color:var(--grey-dark);
+    transition: color 500ms;
+}
+
 /**
 *Titre slogan et image du chien 
 */
@@ -72,5 +95,96 @@ header section {
   font-size: 1.3rem;
   margin: 0;
   font-weight: lighter;
-  color: #999999;
+  color: var(--grey);
 }
+
+/** Parti "main" du site */
+
+.welcome {
+  text-align: center;
+  width: 25%;
+  margin: 60px auto; /* haut ET bas ; droite ET gauche en auto */
+}
+
+.welcome h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.welcome p {
+    margin: 0;
+    font-weight: lighter;
+    color: var(--grey);
+}
+
+/* PLACEMENT DU TEXTE DE LA CARD */
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:100px ;
+    text-align: right;
+    width: 60%;
+    margin: auto auto 60px auto;
+}
+
+/* Prend tous les enfants en position en position pair */
+
+.card:nth-child(even){
+    text-align:left
+}
+
+.card .card-content {
+  width: 40%;
+}
+
+/* TITRE DE LA CARD */
+
+.card .card-content h3{
+  margin: 0;
+  font-size: 2rem;
+  font-weight: normal; /* noircire le titre par rapport au texte */
+}
+
+/* TEXTE DE LA CARD */
+
+.card .card-content p {
+    margin: 20px 0 40px 0;
+    color: var(--grey);
+}
+
+/* FAIRE LE BOUTON */
+
+.card .card-content a {
+    background-color: var(--green);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: background-color 350ms;
+}
+
+.card .card-content a:hover{
+    background-color: var(--black);
+    transition: background-color 350ms;
+}
+
+/* FAIRE L'IMAGE */
+
+.card .picture {
+    width: 40%;
+    box-shadow: 10px 10px 0 var(--green);
+}
+
+/* Footer de la page */
+
+footer {
+    background-color: var(--grey-dark);
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 50px 0;
+}
+
