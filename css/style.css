@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display&display=swap');
+
+body{
+    font-family:'Open sans', sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+#menu{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    padding: 20px 0 20px 0; /* haut droite bas gauche |  ou padding-top/bottom/right/left */
+    
+    
+}
+
+.logo{
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+} 
+
+.logo span {
+    color: orange;
+}
+
+#menu nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 35px;
+}
+
+#menu nav ul li a {
+    text-decoration: none;
+    color: #999999;
+}
